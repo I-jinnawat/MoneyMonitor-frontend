@@ -1,11 +1,4 @@
-import React from 'react'
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-import Report from '../report'; // Example home page
-
-type Props = {}
-
-const navbar = (props: Props) => {
+const navbar = () => {
     return (
         <div className="navbar bg-base-100">
             <div className="flex-1">

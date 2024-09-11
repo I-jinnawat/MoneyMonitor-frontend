@@ -1,11 +1,9 @@
 import { useState, useEffect } from 'react';
 import Table from './components/tableTransaction';
 
-type Props = {
-    URL: string;
-};
 
-const Report = (props: Props) => {
+
+const Report = () => {
     const [data, setData] = useState<any[]>([]);
     const [summary, setSummary] = useState({
         totalIncome: 0,
@@ -26,6 +24,7 @@ const Report = (props: Props) => {
             const result = await response.json();
             setData(result.transactions);
             setSummary(result.summary);
+            console.log(data)
         } catch (error) {
             console.error('Error fetching data:', error);
         }
