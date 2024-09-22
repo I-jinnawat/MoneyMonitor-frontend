@@ -17,10 +17,10 @@ const Report = () => {
             fetchData(selectedMonth);
         }
     }, [selectedMonth]);
-    const URL = `https://api-backend-wdu7.onrender.com/transaction?month=${selectedMonth}`
+    const URL = `https://api-backend-rgdq.onrender.com/transaction?month=${selectedMonth}`
     const fetchData = async (month: string) => {
         try {
-            const response = await fetch(`https://api-backend-wdu7.onrender.com/report/${month}`);
+            const response = await fetch(`https://api-backend-rgdq.onrender.com/report/${month}`);
             const result = await response.json();
             setData(result.transactions);
             setSummary(result.summary);
